@@ -49,6 +49,7 @@ h2 {
     font-size: 2rem;
     font-weight: var(--fw-bold);
     line-height: 1;
+    text-transform: uppercase;
 }
 
 .flow-content > * + * {
