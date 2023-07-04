@@ -65,8 +65,11 @@ h2 {
 
 .models > * {
     /* try grid to make sure the .read-more don't change position too mouch */
-    --spacer: 1.5rem;
+    /*--spacer: 1.5rem;*/
     padding: 2.5rem;
+
+    display: grid;
+    gap: 1.5rem;
 }
 
 .models > *:first-child {
@@ -103,9 +106,12 @@ h2 {
     background-color: var(--neutral-Very-light-gray);
     border-radius: 100vw;
     text-decoration: none;
+
+    margin-top: auto;
+    justify-self: start;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 670px) {
     .models {
         flex-direction: row;
     }
