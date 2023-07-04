@@ -27,10 +27,13 @@
 }
 
 body {
+    padding: .8rem;
     min-height: 100vh;
     font-family: var(--font-primary);
     font-size: .9375rem;
     font-weight: var(--fw-regular);
+    line-height: 1.4;
+    color: var(--neutral-transparent-white);
 
     display: grid;
     place-items: center;
@@ -39,4 +42,91 @@ body {
 img {
     display: block;
     max-width: 100%;
+}
+
+h2 {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+    line-height: 1;
+}
+
+.flow-content > * + * {
+    margin-block-start: var(--spacer, 1em);
+}
+
+.models {
+    max-width: 56rem;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.models > * {
+    /* try grid to make sure the .read-more don't change position too mouch */
+    --spacer: 1.5rem;
+    padding: 2.5rem;
+}
+
+.models > *:first-child {
+    /*border-top-left-radius: 5px;
+    border-top-right-radius: 5px;*/
+    border-radius: 5px 5px 0 0;
+}
+
+.models > *:last-child {
+    /*border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;*/
+    border-radius: 0 0 5px 5px;
+}
+
+.sedan {
+    --accent: var(--primary-Bright-orange);
+    background-color: var(--accent);
+}
+
+.suv {
+    --accent: var(--primary-Dark-cyan);
+    background-color: var(--accent);
+}
+
+.luxury {
+    --accent: var(--primary-Very-dark-cyan);
+    background-color: var(--accent);
+}
+
+.learn-more {
+    padding: .9em 1.7em;
+    display: inline-block;
+    color: var(--accent);
+    background-color: var(--neutral-Very-light-gray);
+    border-radius: 100vw;
+    text-decoration: none;
+}
+
+@media (min-width: 650px) {
+    .models {
+        flex-direction: row;
+    }
+
+    .models > * {
+        flex-basis: 100%;
+    }
+    
+    .models > *:first-child {
+        /*border-top-left-radius: unset;
+        border-top-right-radius: unset;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;*/
+        border-radius: 5px 0 0 5px;
+    }
+
+    .models > *:last-child {
+        /*border-bottom-left-radius: unset;
+        border-bottom-right-radius: unset;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;*/
+        border-radius: 0 5px 5px 0;
+    }
 }
