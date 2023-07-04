@@ -111,6 +111,13 @@ h2 {
     justify-self: start;
 }
 
+.learn-more:focus,
+.learn-more:hover {
+    color: var(--neutral-transparent-white);
+    background-color: transparent;
+    outline: 2px solid var(--neutral-transparent-white);
+}
+
 @media (min-width: 670px) {
     .models {
         flex-direction: row;
